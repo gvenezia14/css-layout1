@@ -1,29 +1,65 @@
-/*insert custom css below*/
+/*insert custom css below: Block level (p, div, hr,) forces stuff to another line
+can override how they work; inline elements (anchor tags, span tags) default inline display*/
 
 
 body {
+  padding-top: 80px;
 }
 
 .heading {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 20px; /*vertical, horizontal*/
+  border-bottom: 2px solid #222;
 }
 
 .heading h1 {
+  margin: 10px 0;
 }
 
 .box {
+  width: 31%;
+  float: left;
+  margin-right: 1.5%;
+  margin-bottom: 100px;
+  padding: 3%;
 }
 
 .box:last-child {
+  margin-right: 0;
 }
 
 .box h2 {
 }
 
 .box img {
+  width: 100%;
 }
 
+
+/*Other Position schemes:
+        static - same as defualt
+        relative - relative from that container, creates 100px border on left and 10px border on top - shifts it down and right
+        absolute - all space above the title went away - moves element out of parent container for positioning purposes - all coordinates
+        take place on the page as a whole, not referring to container; all 3 images will be in the same place
+        fixed - looks same as absolute. But here the image stays where it is when you scroll. But with absolute it would stay at top of page. */
+
+
+
 .box a.read-more {
+  display: block;
+  margin-top: 5px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
 }
 
 .footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 0 20px;
+  position: fixed;
+  border-top: 2px solid #eee;
 }
